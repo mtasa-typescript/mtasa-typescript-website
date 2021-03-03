@@ -1,6 +1,13 @@
 <template>
-  <component :is="tag || 'h1'" class="title" :data-color="color || 'default'">
-    <span class="icon"><component :is="icon"></component></span>
+  <component
+    :is="tag || 'h1'"
+    class="title"
+    :data-color="color || 'default'"
+    :data-subtitle="subtitle || 'false'"
+  >
+    <a class="icon" v-scroll-to="'#title'">
+      <component :is="icon"></component>
+    </a>
     <span class="label">{{ label }}</span>
   </component>
 </template>
@@ -14,6 +21,7 @@ export default Vue.extend({
     color: String,
     icon: String,
     tag: String,
+    subtitle: String,
   },
 })
 </script>
@@ -47,15 +55,19 @@ export default Vue.extend({
   > .label {
     display: inline-block;
     width: 100%;
-
   }
 
   > .icon {
     width: 120px;
     height: 120px;
-    margin-left: 16px;
+    margin-left: 32px;
     margin-right: 16px;
     position: absolute;
+    cursor: pointer;
+  }
+
+  &[data-subtitle='true'] {
+    margin-top: 128px;
   }
 }
 </style>

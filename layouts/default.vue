@@ -22,4 +22,18 @@ body, html {
 * {
   box-sizing: border-box;
 }
+
+*::-webkit-scrollbar {
+  width: 6px;
+  background: var(--white);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
 </style>

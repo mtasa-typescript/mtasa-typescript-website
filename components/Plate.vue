@@ -1,32 +1,69 @@
 <template>
-  <div>
-    <p>Work in progress</p>
+  <div class="plate-container">
+    <div
+      class="plate"
+      :data-color="color || 'default'"
+      :style="inlineStyle || ''"
+    >
+      <div class="plate-content">
+        <slot></slot>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Vue from "vue";
+import Vue from 'vue'
 
-export default Vue.extend({});
+export default Vue.extend({
+  props: {
+    color: String,
+    inlineStyle: String,
+  },
+})
 </script>
 
 <style scoped lang="scss">
-div {
+.plate-container {
   width: 100%;
+  overflow-x: hidden;
   margin: 32px 0;
-  height: 360px;
-  background-color: var(--blue);
-  transform: skewY(-1.075deg);
-}
+  padding: 32px 0;
 
-p {
-  transform: skewY(1.075deg);
+  > .plate {
+    width: 100%;
+    padding: 32px 0;
+    transition: 0.15s transform;
+    transform: skewY(-1.075deg);
 
-  font-family: Playfair Display, serif;
-  color: var(--white);
-  font-size: 96px;
-  font-style: italic;
-  padding-top: 100px;
-  text-align: center;
+    > .plate-content {
+      transition: 0.25s transform;
+      transform: skewY(1.075deg);
+    }
+
+    &[data-color='default'] {
+      background-color: var(--blue);
+    }
+
+    &[data-color='gray'] {
+      background-color: var(--gray);
+    }
+
+    &[data-color='dark-gray'] {
+      background-color: var(--dark-gray);
+    }
+
+    &[data-color='orange'] {
+      background-color: var(--orange);
+    }
+
+    &.hidden {
+      transform: translateX(-100%);
+
+      > .plate-container {
+        transform: translateX(100%);
+      }
+    }
+  }
 }
 </style>

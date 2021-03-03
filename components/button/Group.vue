@@ -1,16 +1,16 @@
 <template>
   <div>
-    <a href="https://github.com/mtasa-typescript/resource-boilerplate">
+    <a v-scroll-to="'#get-started'">
       <ButtonItem
         class="button"
         label="Get Started"
         color="purple"
       ></ButtonItem>
     </a>
-    <a href="https://github.com/mtasa-typescript/resource-example">
+    <a v-scroll-to="'#example'">
       <ButtonItem class="button" label="Example"></ButtonItem>
     </a>
-    <a href="https://github.com/mtasa-typescript/resource-boilerplate">
+    <a v-scroll-to="'#documentation'">
       <ButtonItem
         class="button"
         label="Documentation"

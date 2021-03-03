@@ -1,39 +1,35 @@
 <template>
   <div class="container">
-    <Title icon="IconMtasaTypescript" label="MTA:SA TypeScript"></Title>
-    <Plate></Plate>
-    <ButtonGroup></ButtonGroup>
-    <div class="links">
-<!--      <a-->
-<!--        href="https://nuxtjs.org/"-->
-<!--        target="_blank"-->
-<!--        rel="noopener noreferrer"-->
-<!--        class="button&#45;&#45;green"-->
-<!--      >-->
-<!--        Documentation-->
-<!--      </a>-->
-<!--      <a-->
-<!--        href="https://github.com/nuxt/nuxt.js"-->
-<!--        target="_blank"-->
-<!--        rel="noopener noreferrer"-->
-<!--        class="button&#45;&#45;grey"-->
-<!--      >-->
-<!--        GitHub-->
-<!--      </a>-->
-    </div>
+    <PartWelcome></PartWelcome>
+    <PartGetStarted></PartGetStarted>
+    <PartExample></PartExample>
+    <PartDocumentation></PartDocumentation>
+    <div class="footer"></div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  head: {
+    title: 'TypeScript Resources for MTA:SA',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'MTA:SA Resources now can be fully written on TypeScript. ' +
+          'This technique allows developer to view documentation in IDE, lint types, ' +
+          'format code and more...',
+      },
+    ],
+  },
+})
 </script>
 
-<style>
-
-
-.links {
-  padding-top: 15px;
+<style scoped lang="scss">
+.footer {
+  height: 256px;
 }
 </style>

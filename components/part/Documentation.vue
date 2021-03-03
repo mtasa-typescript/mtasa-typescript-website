@@ -1,0 +1,53 @@
+<template>
+  <div>
+    <Title
+      icon="IconDocumentation"
+      label="Documentation"
+      color="orange"
+      subtitle="true"
+      id="documentation"
+    ></Title>
+
+    <Plate color="orange" class="plate-link">
+      <Typography class="documentation">
+        Revealing documentation for declared entities in your IDE described in
+        Get Started tutorial. <br />
+        All declared function definitions, classes, properties and methods are
+        taken from <b>MTA:SA Wiki</b>
+      </Typography>
+    </Plate>
+
+    <div class="image-container">
+      <img
+        src="~/assets/Documentation.png"
+        alt="Function Example Lua"
+        class="image"
+      />
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({})
+</script>
+
+<style scoped lang="scss">
+.plate-link {
+  .documentation {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1360px;
+  }
+}
+
+.image-container {
+  width: 100%;
+
+  img.image {
+    display: block;
+    margin: 0 auto;
+  }
+}
+</style>

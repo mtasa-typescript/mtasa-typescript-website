@@ -35,15 +35,20 @@ export default {
         families: {
           Roboto: true,
           Poppins: [400, 500, 600, 700],
-          PlayfairDisplay: true,
+          PlayfairDisplay: [400, 700],
+          FiraCode: true,
         },
       },
     ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [['vue-scrollto/nuxt', { duration: 500 }]],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  server: {
+    host: '0',
+  },
 }
