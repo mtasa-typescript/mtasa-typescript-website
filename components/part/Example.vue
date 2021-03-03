@@ -8,11 +8,8 @@
       id="example"
     ></Title>
 
-    <Plate
-      color="default"
-      class="plate-link"
-    >
-      <Typography class="team-sign" >
+    <Plate color="default" class="plate-link">
+      <Typography class="team-sign">
         Example Cinematic Camera resource<br />
         <span class="code">
           <a href="https://github.com/mtasa-typescript/resource-example">
