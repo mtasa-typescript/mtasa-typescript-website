@@ -27,6 +27,8 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
+@import 'assets/variables';
+
 .title {
   font-family: Poppins, sans-serif;
   font-weight: 700;
@@ -55,19 +57,66 @@ export default Vue.extend({
   > .label {
     display: inline-block;
     width: 100%;
+
+    @media (max-width: $w-lg) {
+      margin-bottom: 24px;
+    }
+    @media (max-width: $w-md) {
+      margin-bottom: 18px;
+    }
   }
 
   > .icon {
-    width: 120px;
-    height: 120px;
+    margin-top: 52px;
     margin-left: 32px;
     margin-right: 16px;
     position: absolute;
     cursor: pointer;
+
+    > svg {
+      width: 120px;
+      height: 120px;
+
+      @media (max-width: $w-xl) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: $w-xx) {
+      margin-top: 44px;
+    }
+    @media (max-width: $w-xl) {
+      margin-top: 36px;
+    }
+
+    @media (max-width: $w-lg) {
+      margin-top: 0;
+      position: static;
+    }
   }
 
   &[data-subtitle='true'] {
     margin-top: 128px;
+  }
+
+  @media (max-width: $w-xx) {
+    font-size: 64px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: $w-xl) {
+    font-size: 58px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: $w-lg) {
+    text-align: left;
+  }
+
+  @media (max-width: $w-md) {
+    padding-right: 8px;
+    font-size: 40px;
   }
 }
 </style>

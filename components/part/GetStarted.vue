@@ -36,10 +36,13 @@ export default Vue.extend({})
 </script>
 
 <style scoped lang="scss">
+@import 'assets/variables';
+
 .plate-link {
   .team-sign {
-    padding: 64px 0;
     text-align: center;
+
+    @include plate-padding();
   }
 }
 
@@ -51,6 +54,13 @@ export default Vue.extend({})
     position: relative;
     z-index: 1;
     margin: -110px auto 0 auto;
+
+    @include fluid-image($w-lg, 32px);
+    @include fluid-image($w-sm, 8px);
+
+    @media (max-width: $w-sm) {
+      margin-top: -80px;
+    }
   }
 }
 </style>

@@ -24,21 +24,23 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
+@import 'assets/variables';
+
 .plate-container {
   width: 100%;
   overflow-x: hidden;
   margin: 32px 0;
   padding: 32px 0;
+  transform: skewY(-1.075deg);
 
   > .plate {
     width: 100%;
     padding: 32px 0;
     transition: 0.15s transform;
-    transform: skewY(-1.075deg);
 
     > .plate-content {
-      transition: 0.25s transform;
       transform: skewY(1.075deg);
+      transition: 0.25s transform;
     }
 
     &[data-color='default'] {
@@ -64,6 +66,10 @@ export default Vue.extend({
         transform: translateX(100%);
       }
     }
+  }
+
+  @media (max-width: $w-sm) {
+    margin-top: 0;
   }
 }
 </style>

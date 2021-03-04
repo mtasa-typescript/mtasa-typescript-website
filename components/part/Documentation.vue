@@ -34,11 +34,13 @@ export default Vue.extend({})
 </script>
 
 <style scoped lang="scss">
+@import 'assets/variables';
+
 .plate-link {
   .documentation {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1360px;
+    max-width: $block-width;
   }
 }
 
@@ -48,6 +50,9 @@ export default Vue.extend({})
   img.image {
     display: block;
     margin: 0 auto;
+
+    @include fluid-image($w-lg, 32px);
+    @include fluid-image($w-sm, 8px);
   }
 }
 </style>

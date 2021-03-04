@@ -45,16 +45,20 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
+@import 'assets/variables';
+
 .plate-link {
   .team-sign {
-    padding: 64px 0;
     text-align: center;
+
+    @include plate-padding();
   }
 }
 
 .image-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
 
   img {
@@ -70,8 +74,19 @@ export default Vue.extend({
 
       &:first-of-type {
         margin-right: 128px;
+
+        @media (max-width: $w-xl) {
+          margin-right: 0;
+          margin-bottom: 64px;
+        }
       }
+
+      @include fluid-image($w-sm, 8px);
     }
+  }
+
+  @media (max-width: $w-xl) {
+    flex-direction: column;
   }
 }
 </style>

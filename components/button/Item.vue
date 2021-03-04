@@ -14,6 +14,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import 'assets/variables';
+
 button {
   width: 290px;
   height: 60px;
@@ -55,6 +57,16 @@ button {
     border-bottom-color: inherit;
     border-width: 2px;
     border-radius: 0;
+  }
+
+  @media (max-width: $w-xl) {
+    width: 250px;
+  }
+
+  @media (max-width: $w-lg) {
+    width: 290px;
+    height: 55px;
+    font-size: 20px;
   }
 }
 </style>

@@ -16,6 +16,8 @@ export default Vue.extend({})
 </script>
 
 <style scoped lang="scss">
+@import 'assets/variables';
+
 @keyframes float-text {
   0% {
     transform: translateX(0);
@@ -28,7 +30,6 @@ export default Vue.extend({})
 div.floating-text {
   width: 100%;
   overflow-x: hidden;
-  overflow-y: fragments;
 
   > p {
     width: 200%;
@@ -42,9 +43,12 @@ div.floating-text {
     font-style: italic;
     text-align: left;
     -webkit-font-smoothing: none;
-    content: '';
 
     animation: float-text 25s linear infinite alternate;
+
+    @media (max-width: $w-md) {
+      font-size: 64px;
+    }
   }
 }
 </style>

@@ -29,14 +29,14 @@
     <Plate
       color="dark-gray"
       class="plate-floating"
-      inlineStyle="height: 280px; margin-bottom: -1px;"
+      inlineStyle="margin-bottom: -1px;"
     >
       <FloatingText>
         Documentation &
         <b>Linting</b> & Formatting & <b>IDE Setup</b> &
       </FloatingText>
     </Plate>
-    <Plate color="gray" class="plate-team" inlineStyle="height: 280px">
+    <Plate color="gray" class="plate-team">
       <Typography class="team-sign">
         MTASA TypeScript Team on GitHub:
         <span class="code">
@@ -56,6 +56,8 @@ export default Vue.extend({})
 </script>
 
 <style scoped lang="scss">
+@import 'assets/variables';
+
 .plate-with-bold {
   b {
     font-weight: 600;
@@ -65,7 +67,7 @@ export default Vue.extend({})
   .welcome-center {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1360px;
+    max-width: $block-width;
   }
 
   .welcome {
@@ -80,15 +82,21 @@ export default Vue.extend({})
 
 .button-container {
   margin: 128px 0;
+
+  @media (max-width: $w-sm) {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
 }
 
 .plate-team {
   margin-top: -64px !important;
 
   .team-sign {
-    padding: 32px 0;
-    margin-top: 48px;
+    margin-top: 16px;
     text-align: center;
+
+    @include plate-padding();
   }
 }
 
