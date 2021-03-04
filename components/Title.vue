@@ -1,14 +1,14 @@
 <template>
   <component
     :is="tag || 'h1'"
-    class="title"
+    class='title'
     :data-color="color || 'default'"
     :data-subtitle="subtitle || 'false'"
   >
-    <a class="icon" v-scroll-to="'#title'">
-      <component :is="icon"></component>
+    <a class='icon' v-scroll-to="'#title'">
+      <component :is='icon'></component>
     </a>
-    <span class="label">{{ label }}</span>
+    <span class='label'>{{ label }}</span>
   </component>
 </template>
 
@@ -21,12 +21,12 @@ export default Vue.extend({
     color: String,
     icon: String,
     tag: String,
-    subtitle: String,
-  },
+    subtitle: String
+  }
 })
 </script>
 
-<style scoped lang="scss">
+<style scoped lang='scss'>
 @import 'assets/variables';
 
 .title {
@@ -64,6 +64,9 @@ export default Vue.extend({
     @media (max-width: $w-md) {
       margin-bottom: 18px;
     }
+    @media (max-width: $w-sm) {
+      margin-bottom: 8px;
+    }
   }
 
   > .icon {
@@ -81,6 +84,15 @@ export default Vue.extend({
         width: 100px;
         height: 100px;
       }
+
+      @media (max-width: $w-sm) {
+        width: 48px;
+        height: 48px;
+      }
+      @media (max-width: $w-xs) {
+        width: 32px;
+        height: 32px;
+      }
     }
 
     @media (max-width: $w-xx) {
@@ -93,6 +105,11 @@ export default Vue.extend({
     @media (max-width: $w-lg) {
       margin-top: 0;
       position: static;
+    }
+
+    @media (max-width: $w-xs) {
+      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 
@@ -117,6 +134,10 @@ export default Vue.extend({
   @media (max-width: $w-md) {
     padding-right: 8px;
     font-size: 40px;
+  }
+
+  @media (max-width: $w-sm) {
+    font-size: 32px;
   }
 }
 </style>
