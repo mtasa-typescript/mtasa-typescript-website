@@ -36,6 +36,7 @@ p.typography {
   }
   @media (max-width: $w-sm) {
     font-size: 16px;
+    text-align: center;
   }
 }
 </style>

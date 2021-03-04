@@ -20,11 +20,13 @@
     </Plate>
 
     <div class="image-container">
-      <img
-        src="~/assets/GetStarted.png"
-        alt="Get Started Tutorial"
-        class="image"
-      />
+      <a href="https://github.com/mtasa-typescript/resource-boilerplate">
+        <img
+          src="~/assets/GetStarted.png"
+          alt="Get Started Tutorial"
+          class="image"
+        />
+      </a>
     </div>
   </div>
 </template>
@@ -58,8 +60,8 @@ export default Vue.extend({})
     @include fluid-image($w-lg, 32px);
     @include fluid-image($w-sm, 8px);
 
-    @media (max-width: $w-sm) {
-      margin-top: -80px;
+    @media (max-width: $w-md) {
+      margin-top: 0px;
     }
   }
 }

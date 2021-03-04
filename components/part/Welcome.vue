@@ -2,8 +2,8 @@
   <div>
     <Title
       icon="IconMtasaTypescript"
-      label="TypeScript Resources"
       id="title"
+      label="TypeScript Resources"
     ></Title>
 
     <Plate color="default" class="plate-with-bold">

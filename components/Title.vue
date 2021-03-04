@@ -1,14 +1,14 @@
 <template>
   <component
     :is="tag || 'h1'"
-    class='title'
+    class="title"
     :data-color="color || 'default'"
     :data-subtitle="subtitle || 'false'"
   >
-    <a class='icon' v-scroll-to="'#title'">
-      <component :is='icon'></component>
+    <a class="icon" v-scroll-to="'#title'">
+      <component :is="icon"></component>
     </a>
-    <span class='label'>{{ label }}</span>
+    <span class="label">{{ label }}</span>
   </component>
 </template>
 
@@ -21,12 +21,12 @@ export default Vue.extend({
     color: String,
     icon: String,
     tag: String,
-    subtitle: String
-  }
+    subtitle: String,
+  },
 })
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 @import 'assets/variables';
 
 .title {
@@ -65,7 +65,7 @@ export default Vue.extend({
       margin-bottom: 18px;
     }
     @media (max-width: $w-sm) {
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
   }
 
@@ -128,7 +128,6 @@ export default Vue.extend({
   }
 
   @media (max-width: $w-lg) {
-    text-align: left;
   }
 
   @media (max-width: $w-md) {

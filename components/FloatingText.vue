@@ -47,7 +47,10 @@ div.floating-text {
     animation: float-text 25s linear infinite alternate;
 
     @media (max-width: $w-md) {
-      font-size: 64px;
+      font-size: 32px;
+    }
+    @media (max-width: $w-sm) {
+      animation-duration: 10s;
     }
   }
 }

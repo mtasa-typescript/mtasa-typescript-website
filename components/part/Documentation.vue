@@ -18,11 +18,13 @@
     </Plate>
 
     <div class="image-container">
-      <img
-        src="~/assets/Documentation.png"
-        alt="Function Example Lua"
-        class="image"
-      />
+      <a :href="require('~/assets/Documentation.png')">
+        <img
+          src="~/assets/Documentation.png"
+          alt="Function Example Lua"
+          class="image"
+        />
+      </a>
     </div>
   </div>
 </template>
