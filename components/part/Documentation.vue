@@ -13,7 +13,7 @@
                 Revealing documentation for declared entities in your IDE
                 described in Get Started tutorial. <br />
                 All declared function definitions, classes, properties and
-                methods are taken from <b>MTA:SA Wiki</b>
+                methods are taken from <strong>MTA:SA Wiki</strong>
             </Typography>
         </Plate>
 

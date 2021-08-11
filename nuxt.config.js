@@ -49,7 +49,16 @@ export default {
     modules: [['vue-scrollto/nuxt', { duration: 500 }]],
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {},
+    build: {
+        babel: {
+            plugins: [
+                [
+                    '@babel/plugin-proposal-private-property-in-object',
+                    { loose: true },
+                ],
+            ],
+        },
+    },
 
     server: {
         host: '0',

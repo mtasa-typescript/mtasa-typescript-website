@@ -1,11 +1,13 @@
 <template>
-    <div class="container">
-        <PartWelcome></PartWelcome>
-        <PartGetStarted></PartGetStarted>
-        <PartExample></PartExample>
-        <PartDocumentation></PartDocumentation>
-        <div class="footer"></div>
-    </div>
+    <client-only>
+        <div class="container">
+            <PartWelcome></PartWelcome>
+            <PartGetStarted></PartGetStarted>
+            <PartExample></PartExample>
+            <PartDocumentation></PartDocumentation>
+            <div class="footer"></div>
+        </div>
+    </client-only>
 </template>
 
 <script lang="ts">
