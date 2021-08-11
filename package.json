@@ -10,7 +10,8 @@
         "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
         "lint": "yarn lint:js",
         "test": "jest",
-        "prettier-fix": "prettier . --write"
+        "prettier": "prettier -c .",
+        "prettier-fix": "prettier -w ."
     },
     "dependencies": {
         "@nuxt/typescript-runtime": "^2.1.0",
