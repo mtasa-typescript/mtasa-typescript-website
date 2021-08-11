@@ -1,0 +1,6 @@
+package-lock.json
+**/*.md
+LICENSE
+dist/**
+.nuxt/**
+static

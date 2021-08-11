@@ -1,43 +1,44 @@
 {
-  "name": "mtasa-typescript.github.io",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js",
-    "test": "jest"
-  },
-  "dependencies": {
-    "@nuxt/typescript-runtime": "^2.1.0",
-    "core-js": "^3.16.1",
-    "nuxt": "^2.15.4",
-    "vue-scrollto": "^2.20.0",
-    "vue2-scrollspy": "^2.3.1"
-  },
-  "devDependencies": {
-    "@nuxt/types": "^2.15.7",
-    "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/eslint-config-typescript": "^6.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/google-fonts": "^1.3.0",
-    "@vue/test-utils": "^1.2.2",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.3",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^7.9.0",
-    "jest": "^26.6.3",
-    "node-sass": "^6.0.0",
-    "prettier": "^2.3.2",
-    "sass-loader": "11.0.1",
-    "ts-jest": "^26.5.6",
-    "vue-jest": "^3.0.4"
-  }
+    "name": "mtasa-typescript.github.io",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt-ts",
+        "build": "nuxt-ts build",
+        "start": "nuxt-ts start",
+        "generate": "nuxt-ts generate",
+        "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+        "lint": "yarn lint:js",
+        "test": "jest",
+        "prettier-fix": "prettier . --write"
+    },
+    "dependencies": {
+        "@nuxt/typescript-runtime": "^2.1.0",
+        "core-js": "^3.16.1",
+        "nuxt": "^2.15.4",
+        "vue-scrollto": "^2.20.0",
+        "vue2-scrollspy": "^2.3.1"
+    },
+    "devDependencies": {
+        "@nuxt/types": "^2.15.7",
+        "@nuxt/typescript-build": "^2.1.0",
+        "@nuxtjs/eslint-config-typescript": "^6.0.0",
+        "@nuxtjs/eslint-module": "^3.0.2",
+        "@nuxtjs/google-fonts": "^1.3.0",
+        "@vue/test-utils": "^1.2.2",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^26.6.3",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.2.0",
+        "eslint-plugin-nuxt": "^2.0.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-vue": "^7.9.0",
+        "jest": "^26.6.3",
+        "node-sass": "^6.0.0",
+        "prettier": "^2.3.2",
+        "sass-loader": "11.0.1",
+        "ts-jest": "^26.5.6",
+        "vue-jest": "^3.0.4"
+    }
 }

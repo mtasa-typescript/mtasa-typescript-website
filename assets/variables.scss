@@ -8,19 +8,19 @@ $w-xx: 1500px;
 $block-width: 800px;
 
 @mixin fluid-image($width, $mg) {
-  @media (max-width: $width) {
-    margin-left: $mg;
-    margin-right: $mg;
-    width: calc(100% - #{$mg} - #{$mg});
-  }
+    @media (max-width: $width) {
+        margin-left: $mg;
+        margin-right: $mg;
+        width: calc(100% - #{$mg} - #{$mg});
+    }
 }
 
 @mixin plate-padding() {
-  padding-top: 64px;
-  padding-bottom: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 
-  @media (max-width: $w-md) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
+    @media (max-width: $w-md) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
